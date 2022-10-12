@@ -1,2 +1,2 @@
 # University-Assignments
-Assignments for the University
+Assignments for university
