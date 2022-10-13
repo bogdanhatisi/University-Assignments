@@ -6,10 +6,12 @@ public class ExpressionParser {
 
     String[] args;
     Operation operatie = null;
-    List<ComplexNumber> numbers = new ArrayList<>();
+    ComplexNumber[] numbers;
+
 
     public ExpressionParser(String[] args) {
         this.args = args;
+        numbers = new ComplexNumber[args.length/2 + 1];
 
     }
 
@@ -17,6 +19,10 @@ public class ExpressionParser {
     public void getOperation()
     {
         Operation operatie = null;
+        if(args.length <= 1) {
+            operatie = null;
+            return;
+        }
         if (Objects.equals(args[1], "+")) {
 
             operatie = Operation.ADDITION;
@@ -31,31 +37,53 @@ public class ExpressionParser {
         this.operatie = operatie;
     }
     public void parseNumbers() {
-        List<ComplexNumber> numbers = new ArrayList<>();
+
 
         int i = 0;
+        int current = 0;
 
         while (i <= args.length - 1) {
 
             String[] firstSplit = args[i].split("[+-]");
-            System.out.println(firstSplit[0]);
+
 
             String[] secondSplit = firstSplit[1].split("\\*");
-            System.out.println(secondSplit[0]);
+
             int xTemp = Integer.parseInt(firstSplit[0]);
             String signTemp = args[i].substring(1, 2);
             int yTemp = Integer.parseInt(secondSplit[0]);
             if (Objects.equals(signTemp, "-")) {
                 yTemp = yTemp * (-1);
             }
-            numbers.add(new ComplexNumber(xTemp, yTemp));
-            i++;
-            i++;
+            numbers[current]=new ComplexNumber(xTemp, yTemp);
+            i = i + 2;
+            current++;
 
         }
 
-        this.numbers = numbers;
 
+    }
+
+    public String messageFormat(ComplexNumber c1)
+    {
+        String message = "The final result of the operation is: ";
+        message += c1.getReal();
+        int imaginary = c1.getImaginary();
+        if(c1.getImaginary() > 0)
+        {
+            message += " + ";
+
+
+        }
+        else {
+            message += " - ";
+            imaginary = imaginary * (-1);
+        }
+
+        message += imaginary;
+        message += " * i";
+
+        return message;
     }
 
     public void run()
@@ -63,19 +91,19 @@ public class ExpressionParser {
         getOperation();
         parseNumbers();
 
-        ComplexNumber result = numbers.get(0);
-        ComplexNumber[] operators = new ComplexNumber[2];
-        ExpressionFactory factory = new ExpressionFactory();
-        for(int j = 1; j <= numbers.size() - 1; j++)
-        {
-            operators[0] = result;
-            operators[1] = numbers.get(j);
-            result = factory.createExpression(operatie,operators).execute();
+        if(operatie != null) {
+            ComplexNumber result = numbers[0];
+            ComplexNumber[] operators = new ComplexNumber[2];
+            ExpressionFactory factory = new ExpressionFactory();
+            ComplexNumber finalResult = factory.createExpression(operatie, numbers).execute();
 
+            String message = messageFormat(finalResult);
+            System.out.println(message);
         }
-
-        System.out.println(result.getReal());
-        System.out.println(result.getImaginary());
+        else{
+            String message = messageFormat(numbers[0]);
+            System.out.println(message);
+        }
     }
 
 }

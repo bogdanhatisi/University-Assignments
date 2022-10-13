@@ -17,11 +17,21 @@ public abstract class ComplexExpression {
         this.args = args;
     }
 
-    abstract ComplexNumber executeOneOperation();
+    abstract ComplexNumber executeOneOperation(ComplexNumber c1,ComplexNumber c2);
 
     public final ComplexNumber execute()
-    {
-        return executeOneOperation();
+    {   ComplexNumber result = args[0];
+        ComplexNumber[] operators = new ComplexNumber[2];
+        for(int j = 1; j <= args.length - 1; j++)
+        {
+            operators[0] = result;
+            operators[1] = args[j];
+            result = executeOneOperation(operators[0],operators[1]);
+
+
+        }
+
+        return result;
     }
 
 }

@@ -7,8 +7,8 @@ public class Addition extends ComplexExpression
     }
 
     @Override
-    ComplexNumber executeOneOperation()
+    ComplexNumber executeOneOperation(ComplexNumber c1,ComplexNumber c2)
     {
-        return args[0].addition(args[1]);
+        return c1.addition(c2);
     }
 }
