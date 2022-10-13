@@ -7,8 +7,8 @@ public class Division extends ComplexExpression
     }
 
     @Override
-    ComplexNumber executeOneOperation()
+    ComplexNumber executeOneOperation(ComplexNumber c1,ComplexNumber c2)
     {
-        return args[0].division(args[1]);
+        return c1.division(c2);
     }
 }

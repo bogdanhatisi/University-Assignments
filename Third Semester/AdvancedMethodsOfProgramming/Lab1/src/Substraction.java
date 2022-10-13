@@ -7,8 +7,8 @@ public class Substraction extends ComplexExpression
     }
 
     @Override
-    ComplexNumber executeOneOperation()
+    ComplexNumber executeOneOperation(ComplexNumber c1,ComplexNumber c2)
     {
-        return args[0].substraction(args[1]);
+        return c1.substraction(c2);
     }
 }
