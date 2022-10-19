@@ -19,16 +19,16 @@ public class Main {
 
     }
 
-    private static void testSort()
-    {   int n[]= {3,4,5,6,2,1};
-        Task task1 = new SortingTask("1","Sort this out man!",n,"BubbleSort");
+    private static void testSort() {
+        int n[] = {3, 4, 5, 6, 2, 1};
+        Task task1 = new SortingTask("1", "Sort this out man!", n, "BubbleSort");
         task1.execute();
-        Task task2 = new SortingTask("2","Quick sort this out man !",n,"QuickSort");
+        Task task2 = new SortingTask("2", "Quick sort this out man !", n, "QuickSort");
         task2.execute();
 
 
-
     }
+
     private static void testMessage() {
         Message message1 = new Message("hello", "mircea", "fenesan", LocalDateTime.now());
         Task task1 = new MessageTask("1", "d1", message1);
@@ -56,7 +56,7 @@ public class Main {
             System.out.println(task);
         }
     }
-    
+
     private static void testTaskRunner() {
         Message message1 = new Message("hello", "mircea", "fenesan", LocalDateTime.now());
         Task task1 = new MessageTask("1", "d1", message1);
@@ -80,9 +80,19 @@ public class Main {
         tasks.add(task4);
         tasks.add(task5);
 
-        TaskRunner strategyTaskRunner = new StrategyTaskRunner(Strategy.LIFO);
+        TaskRunner strategyTaskRunner = new StrategyTaskRunner(Strategy.FIFO);
         TaskRunner printerTaskRunner = new PrinterTaskRunner(strategyTaskRunner);
         TaskRunner delayTaskRunner = new DelayTaskRunner(strategyTaskRunner);
+
+
+        for (Task task : tasks) {
+//            strategyTaskRunner.addTask(task);
+            strategyTaskRunner.addTask(task);
+        }
+
+//        strategyTaskRunner.executeAll();
+        strategyTaskRunner.executeAll();
+        System.out.println("Now for the delayTaskRunner!");
 
         for (Task task : tasks) {
 //            strategyTaskRunner.addTask(task);
@@ -91,5 +101,13 @@ public class Main {
 
 //        strategyTaskRunner.executeAll();
         delayTaskRunner.executeAll();
+        System.out.println("Now for the printerTaskRunner!");
+        for (Task task : tasks) {
+//            strategyTaskRunner.addTask(task);
+            printerTaskRunner.addTask(task);
+        }
+
+//        strategyTaskRunner.executeAll();
+        printerTaskRunner.executeAll();
     }
 }
