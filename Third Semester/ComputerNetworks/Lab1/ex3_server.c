@@ -34,23 +34,25 @@ int main() {
   memset(&client, 0, sizeof(client));
   
   while (1) {
-    uint16_t a, b, suma;
     c = accept(s, (struct sockaddr *) &client, &l);
     printf("S-a conectat un client.\n");
     // deservirea clientului
-    recv(c, &a, sizeof(a), MSG_WAITALL);
-    a = ntohs(a);
-    suma = 0;
-    
-    for(int i=1; i<=a; i++)
-    {
-	
-    recv(c,&b,sizeof(b), MSG_WAITALL);
-    b = ntohs(b);
-    suma = suma + b;
-    }
-    suma = htons(suma);
-    send(c, &suma, sizeof(suma), 0);
+    uint16_t stringLength;
+
+    int res = recv(c, (char*)&stringLength, sizeof(uint16_t), 0);
+   
+    stringLength = ntohs(stringLength);
+
+    char recievedString[256];
+    char reversedString[256];
+
+    res = recv(c, (char*)&recievedString, sizeof(recievedString), 0);
+	uint16_t numberOfSpaces = 0;
+	for(uint16_t index = 0; index < stringLength; index++)
+		reversedString[index] = recievedString[stringLength-index-1];
+
+
+    send(c, (char*)reversedString, sizeof(reversedString), 0);
     close(c);
     // sfarsitul deservirii clientului;
   }

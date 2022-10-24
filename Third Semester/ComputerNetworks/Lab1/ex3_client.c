@@ -28,22 +28,21 @@ int main() {
     return 1;
   }
   
-  printf("a = ");
-  scanf("%hu", &a);
-  int x = a;
-  a = htons(a);
-  send(c, &a, sizeof(a),0);
-  
-  for(int i = 1; i <= x; i++)
-  {
-  printf("b = ");
-  scanf("%hu",&b);
-  b = htons(b);
-  send(c, &b, sizeof(b), 0);
-  }
+  char sendString[256];
+  printf("Enter  the string: ");
+  fgets(sendString, 256, stdin);
 
-  recv(c, &suma, sizeof(suma), 0);
-  suma = ntohs(suma);
-  printf("Suma este %hu\n", suma);
+  uint16_t lengthOfString = strlen(sendString);
+  lengthOfString = htons(lengthOfString);
+
+  send(c, &lengthOfString, sizeof(uint16_t),0);
+  send(c, sendString, sizeof(sendString), 0);
+
+  char recievedString[256];
+  recv(c, &recievedString, sizeof(recievedString), 0);
+
+
+  printf("The reversed string  is : %s!\n",recievedString);
+
   close(c);
 }
