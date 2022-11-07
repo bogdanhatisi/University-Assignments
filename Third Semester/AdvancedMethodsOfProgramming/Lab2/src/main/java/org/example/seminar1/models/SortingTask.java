@@ -2,9 +2,14 @@ package org.example.seminar1.models;
 
 import org.example.seminar1.utils.Utils;
 
+import java.util.Objects;
+
+/**
+ * SortingTask extends Task, executing the sorting task with the help fo the AbstractSorter
+ */
 public class SortingTask extends Task {
     private int [] numberList;
-    private String method;
+    private final String method;
 
     public SortingTask(String taskID, String description, int[] numberList,String method) {
         super(taskID, description);
@@ -15,7 +20,7 @@ public class SortingTask extends Task {
     @Override
     public void execute() {
 
-        if(method=="BubbleSort")
+        if(Objects.equals(method, "BubbleSort"))
         {
             AbstractSorter sorter = new BubbleSort(numberList);
             sorter.sort();
@@ -23,7 +28,7 @@ public class SortingTask extends Task {
             Utils.printArray(numberList);
         }
 
-        else if (method=="QuickSort")
+        else if (Objects.equals(method, "QuickSort"))
         {
             AbstractSorter sorter = new QuickSort(numberList);
             sorter.sort();

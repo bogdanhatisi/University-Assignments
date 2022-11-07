@@ -1,5 +1,8 @@
 package org.example.seminar1.models;
 
+/**
+ * MessageTask - prints given messages in execute() method
+ */
 public class MessageTask extends Task {
     private Message message;
 

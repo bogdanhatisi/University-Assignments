@@ -10,12 +10,20 @@ import org.example.seminar1.runners.TaskRunner;
 import java.time.LocalDateTime;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
         //testMessage();
-        testTaskRunner();
-        //testSort();
+        System.out.println(args[0]);
+        if(Objects.equals(args[0], "fifo")) {
+            testTaskRunner(Strategy.FIFO);
+        }
+        if (Objects.equals(args[0], "lifo"))
+        {
+            testTaskRunner(Strategy.LIFO);
+        }
+            //testSort();
 
     }
 
@@ -57,7 +65,7 @@ public class Main {
         }
     }
 
-    private static void testTaskRunner() {
+    private static void testTaskRunner(Strategy strat) {
         Message message1 = new Message("hello", "mircea", "fenesan", LocalDateTime.now());
         Task task1 = new MessageTask("1", "d1", message1);
 
@@ -80,7 +88,7 @@ public class Main {
         tasks.add(task4);
         tasks.add(task5);
 
-        TaskRunner strategyTaskRunner = new StrategyTaskRunner(Strategy.FIFO);
+        TaskRunner strategyTaskRunner = new StrategyTaskRunner(strat);
         TaskRunner printerTaskRunner = new PrinterTaskRunner(strategyTaskRunner);
         TaskRunner delayTaskRunner = new DelayTaskRunner(strategyTaskRunner);
 

@@ -5,6 +5,11 @@ import org.example.seminar1.factories.Strategy;
 import org.example.seminar1.factories.TaskContainerFactory;
 import org.example.seminar1.models.Task;
 
+
+/**
+ *  Class for choosing the strategy of the task runner (FIFO/LIFO)
+ */
+
 public class StrategyTaskRunner implements TaskRunner {
     private Container container;
 

@@ -4,6 +4,9 @@ import org.example.seminar1.utils.Utils;
 
 import java.time.LocalDateTime;
 
+/**
+ * PrinterTaskRunner - adds a print statement after each task is executed
+ */
 public class PrinterTaskRunner extends AbstractTaskRunner {
     public PrinterTaskRunner(TaskRunner taskRunner) {
         super(taskRunner);

@@ -1,5 +1,8 @@
 package org.example.seminar1.models;
 
+/**
+ * Bubble sort implementation
+ */
 public class BubbleSort extends AbstractSorter{
 
     public BubbleSort(int[] numberList) {

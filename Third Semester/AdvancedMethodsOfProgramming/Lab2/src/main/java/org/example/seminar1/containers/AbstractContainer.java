@@ -5,6 +5,9 @@ import org.example.seminar1.models.Task;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * AbstractContainer class
+ */
 public abstract class AbstractContainer implements Container {
 
     protected List<Task> dataStructure = new ArrayList<>();

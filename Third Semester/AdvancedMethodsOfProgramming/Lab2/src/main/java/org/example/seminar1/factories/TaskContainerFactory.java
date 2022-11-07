@@ -4,6 +4,9 @@ import org.example.seminar1.containers.Container;
 import org.example.seminar1.containers.QueueContainer;
 import org.example.seminar1.containers.StackContainer;
 
+/**
+ * TaskContainerFactory-singleton that creates only one instance
+ */
 public class TaskContainerFactory implements Factory {
     private final static TaskContainerFactory taskContainerFactory = new TaskContainerFactory();
 

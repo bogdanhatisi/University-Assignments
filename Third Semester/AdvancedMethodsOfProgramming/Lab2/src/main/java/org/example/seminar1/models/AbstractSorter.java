@@ -2,6 +2,9 @@ package org.example.seminar1.models;
 
 import java.util.List;
 
+/**
+ * AbstractSorter, sorts list by a method which we can override
+ */
 public abstract class AbstractSorter {
     private int[] numberList;
 

@@ -1,5 +1,8 @@
 package org.example.seminar1.models;
 
+/**
+ * QuickSort implementation
+ */
 public class QuickSort extends AbstractSorter{
 
 
@@ -34,7 +37,7 @@ public class QuickSort extends AbstractSorter{
 
             // If current element is smaller
             // than the pivot
-            if (arr[j] < pivot) {
+            if (arr[j] > pivot) {
 
                 // Increment index of
                 // smaller element

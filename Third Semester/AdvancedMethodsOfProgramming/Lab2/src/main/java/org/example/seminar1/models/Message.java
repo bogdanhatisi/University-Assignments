@@ -4,6 +4,9 @@ import java.time.LocalDateTime;
 
 import static org.example.seminar1.utils.Utils.DATE_TIME_FORMATTER;
 
+/**
+ * Message class for the message object
+ */
 public class Message {
     private String message;
     private String from;

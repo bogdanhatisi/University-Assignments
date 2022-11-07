@@ -2,6 +2,9 @@ package org.example.seminar1.models;
 
 import java.util.Objects;
 
+/**
+ *  Class Task implements the Task Object, with getters, setters and the execute() method
+ */
 public abstract class Task {
     private String taskID;
     private String description;

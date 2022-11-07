@@ -2,6 +2,10 @@ package org.example.seminar1.runners;
 
 import org.example.seminar1.models.Task;
 
+
+/**
+ * Abstract class of TaskRunner
+ */
 public abstract class AbstractTaskRunner implements TaskRunner {
     protected final TaskRunner taskRunner;
 
