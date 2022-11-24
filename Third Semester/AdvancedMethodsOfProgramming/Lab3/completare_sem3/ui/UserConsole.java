@@ -1,5 +1,6 @@
 package socialnetwork.ui;
 
+import socialnetwork.exceptions.RepositoryException;
 import socialnetwork.service.Service;
 
 import java.util.Scanner;
@@ -53,7 +54,7 @@ public class UserConsole {
             this.service.removeFriend(username, removedUsername);
             System.out.println("You removed a friend :( !");
         }
-        catch (Error error) {
+        catch (RepositoryException error) {
             System.out.println("An error has occured" + error.getMessage());
         }
     }

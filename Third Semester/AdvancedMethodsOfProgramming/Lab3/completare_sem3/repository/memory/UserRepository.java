@@ -2,6 +2,7 @@ package socialnetwork.repository.memory;
 
 import socialnetwork.domain.User;
 import socialnetwork.domain.validators.Validator;
+import socialnetwork.exceptions.RepositoryException;
 
 import java.io.*;
 import java.util.AbstractMap;
@@ -107,24 +108,23 @@ public class UserRepository extends InMemoryRepository0<Long, User> {
         return null;
     }
 
-    public void addUser(String username, String firstName, String lastName)
-    {
+    public void addUser(String username, String firstName, String lastName) throws RepositoryException {
         this.currentId = this.currentId + 1;
         Long id = this.currentId;
         User user = new User(id,username,firstName,lastName);
 
         if(this.userIs(username))
         {
-            throw new Error("Username already exists!");
+            throw new RepositoryException("Username already exists!");
         }
 
         this.save(user);
         this.appendFile(user);
     }
 
-    public void removeUser(Long id) {
+    public void removeUser(Long id) throws RepositoryException {
         if (this.delete(id) == null) {
-            throw new Error("Username invalid!");
+            throw new RepositoryException("Username invalid!");
         } else {
             for (Map.Entry<Long, User> entry : this.getAll()) {
                 entry.getValue().getFriends().removeIf(user -> Objects.equals(user.getId(), id));
@@ -133,19 +133,18 @@ public class UserRepository extends InMemoryRepository0<Long, User> {
         }
     }
 
-    public void addFriendbyId(Long firstId,Long secondId)
-    {
+    public void addFriendbyId(Long firstId,Long secondId) throws RepositoryException {
         User firstUser = this.getEntity(firstId);
         User secondUser = this.getEntity(secondId);
 
         if(firstUser == null)
         {
-            throw new Error("User invalid!");
+            throw new RepositoryException("User invalid!");
         }
 
         if(secondUser == null)
         {
-            throw new Error("User invalid!");
+            throw new RepositoryException("User invalid!");
         }
 
         this.getEntity(firstId).getFriends().add(this.getEntity(secondId));
@@ -172,7 +171,7 @@ public class UserRepository extends InMemoryRepository0<Long, User> {
 
     }
 
-    public Map.Entry<Long,Long> getRemovedFriendsIdPair(String senderUsername, String receiverUsername){
+    public Map.Entry<Long,Long> getRemovedFriendsIdPair(String senderUsername, String receiverUsername) throws RepositoryException {
 
         Long senderId = this.getUserIdByUsername(senderUsername);
         Long receiverId = this.getUserIdByUsername(receiverUsername);
@@ -181,7 +180,7 @@ public class UserRepository extends InMemoryRepository0<Long, User> {
         User receiver = this.entities.get(receiverId);
 
         if (!sender.getFriends().removeIf(user -> (Objects.equals(user.getUsername(), receiverUsername)))) {
-            throw new Error("Can't remove friend since friendship doesn't exist!\n");
+            throw new RepositoryException("Can't remove friend since friendship doesn't exist!\n");
         }
         receiver.getFriends().removeIf(user -> (Objects.equals(user.getUsername(), senderUsername)));
 
@@ -189,13 +188,12 @@ public class UserRepository extends InMemoryRepository0<Long, User> {
         //this.friendships.removeIf(friendship -> ((Objects.equals(friendship.getUser1(), sender) && Objects.equals(friendship.getUser2(), receiver)) || (Objects.equals(friendship.getUser1(), receiver) && Objects.equals(friendship.getUser2(), sender))));
     }
 
-    public void logUser(String username)
-    {
+    public void logUser(String username) throws RepositoryException {
         Long idUser = this.getUserIdByUsername(username);
 
         if (idUser == null)
         {
-            throw new Error("Invalid username!");
+            throw new RepositoryException("Invalid username!");
         }
     }
 

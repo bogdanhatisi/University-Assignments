@@ -1,5 +1,7 @@
 package socialnetwork.ui;
 
+import socialnetwork.exceptions.RepositoryException;
+import socialnetwork.exceptions.ValidationException;
 import socialnetwork.service.Service;
 
 import java.util.Scanner;
@@ -39,8 +41,10 @@ public class Console {
         try {
             this.service.addUser(username, firstName, lastName);
             System.out.println("User added successfully!");
-        } catch (Error error) {
-            System.out.println("An error has occured" + error.getMessage());
+        } catch (RepositoryException error) {
+            System.out.println("An error has occured: \n" + error.getMessage());
+        } catch (ValidationException error) {
+            System.out.println("An error has occured: \n" + error.getMessage());
         }
     }
 
@@ -53,8 +57,8 @@ public class Console {
         try {
             this.service.removeUser(idUser);
             System.out.println("User with id" + idUser + "successfully removed!\n");
-        } catch (Error error) {
-            System.out.println("An error has occured" + error.getMessage());
+        } catch (RepositoryException error) {
+            System.out.println("An error has occured: \n" + error.getMessage());
         }
     }
 
@@ -68,8 +72,8 @@ public class Console {
             this.service.logUser(username);
             UserConsole userConsole = new UserConsole(this.service, username);
             userConsole.runUserVersion();
-        } catch (Error error) {
-            System.out.println("An error has occured" + error.getMessage());
+        } catch (RepositoryException error) {
+            System.out.println("An error has occured: \n" + error.getMessage());
         }
     }
 
