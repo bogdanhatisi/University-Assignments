@@ -36,10 +36,10 @@ public class UserConsole {
         try
         {
             this.service.addFriend(username, receiverUsername);
-            System.out.println("Congratiulations, you have a new friend!");
+            System.out.println("Congratulations, you have a new friend!");
         }
         catch (Error error) {
-            System.out.println("An error has occured" + error.getMessage());
+            System.out.println("An error has occurred" + error.getMessage());
         }
     }
 
@@ -55,7 +55,7 @@ public class UserConsole {
             System.out.println("You removed a friend :( !");
         }
         catch (RepositoryException error) {
-            System.out.println("An error has occured" + error.getMessage());
+            System.out.println("An error has occurred" + error.getMessage());
         }
     }
 

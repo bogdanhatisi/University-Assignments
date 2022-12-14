@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="completare_sem3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/completare_sem3/member-search-index.zip!/" />
+      <root url="jar://$PROJECT_DIR$/completare_sem3/type-search-index.zip!/" />
+      <root url="jar://$PROJECT_DIR$/completare_sem3/package-search-index.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

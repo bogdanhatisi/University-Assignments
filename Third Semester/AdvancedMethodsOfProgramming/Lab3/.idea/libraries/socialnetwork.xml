@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="socialnetwork">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/completare_sem3/out/production/Lab3/socialnetwork/member-search-index.zip!/" />
+      <root url="jar://$PROJECT_DIR$/completare_sem3/out/production/Lab3/socialnetwork/package-search-index.zip!/" />
+      <root url="jar://$PROJECT_DIR$/completare_sem3/out/production/Lab3/socialnetwork/type-search-index.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
