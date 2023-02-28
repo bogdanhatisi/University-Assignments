@@ -22,7 +22,7 @@ public class UserDbRepository implements Repository<Long, User> {
         this.url = url;
         this.databaseUsername = databaseUsername;
         this.password = password;
-        this.currentId = Long.valueOf(0);
+        this.currentId = this.getLastId();
 
     }
     @Override
@@ -30,6 +30,24 @@ public class UserDbRepository implements Repository<Long, User> {
         return Optional.empty();
     }
 
+    public Long getLastId()
+    {
+        try (Connection connection = DriverManager.getConnection(url, databaseUsername, password);
+             PreparedStatement statement = connection.prepareStatement("SELECT * from users ORDER BY id DESC");
+             ResultSet resultSet = statement.executeQuery()) {
+
+            if(resultSet.next())
+            {
+                Long id = resultSet.getLong("id");
+                return id;
+            }
+
+            return (long)1;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return (long)1;
+    }
     @Override
     public Iterable<User> findAll() {
         Set<User> users = new HashSet<>();
@@ -164,11 +182,15 @@ public class UserDbRepository implements Repository<Long, User> {
         }
     }
 
-    public Map.Entry<Long,Long> getFriendsId(String senderUsername, String receiverUsername){
+    public Map.Entry<Long,Long> getFriendsId(String senderUsername, String receiverUsername) throws RepositoryException{
 
         Long senderId = this.getUserIdByUsername(senderUsername);
         Long receiverId = this.getUserIdByUsername(receiverUsername);
 
+        if(senderId == null || receiverId == null)
+        {
+            throw new RepositoryException("Id must be valid");
+        }
 
         return new AbstractMap.SimpleEntry<Long,Long>(senderId,receiverId);
     }

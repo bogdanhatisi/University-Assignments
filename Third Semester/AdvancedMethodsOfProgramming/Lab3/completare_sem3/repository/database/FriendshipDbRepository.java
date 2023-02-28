@@ -116,6 +116,25 @@ public class FriendshipDbRepository implements Repository<DoubleKeyLong, Friends
 
     }
 
+    public void removeFriends(Long firstId)
+    {
+        try (Connection connection = DriverManager.getConnection(url, databaseUsername, password);
+             PreparedStatement statement = connection.prepareStatement("SELECT * from friendships WHERE first_id ='"+firstId+"'");
+             ResultSet resultSet = statement.executeQuery()) {
+
+            while (resultSet.next()) {
+                Long first = resultSet.getLong("first_id");
+                Long secondId = resultSet.getLong("second_id");
+                this.removeFriendship(first,secondId);
+
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @Override
     public Optional<Friendship> update(Friendship entity) {

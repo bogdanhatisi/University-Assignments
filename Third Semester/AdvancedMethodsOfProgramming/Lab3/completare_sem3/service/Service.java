@@ -32,9 +32,10 @@ public class Service {
 
     public void removeUser(Long id) throws RepositoryException {
         this.userRepository.removeUser(id);
+        this.friendshipRepository.removeFriends(id);
     }
 
-    public void addFriend(String senderUsername, String receiverUsername) {
+    public void addFriend(String senderUsername, String receiverUsername) throws RepositoryException {
         Map.Entry<Long, Long> pairId = this.userRepository.getFriendsId(senderUsername, receiverUsername);
         this.friendshipRepository.addFriendship(pairId.getKey(), pairId.getValue());
         this.friendshipRepository.addFriendship(pairId.getValue(), pairId.getKey());

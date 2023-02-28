@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.43">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>760</IntrospectionStateNumber>
+      <IntrospectionStateNumber>774</IntrospectionStateNumber>
       <ServerVersion>15.1</ServerVersion>
-      <StartupTime>1670443769</StartupTime>
+      <StartupTime>1671054413</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -805,7 +805,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>760</IntrospectionStateNumber>
+      <IntrospectionStateNumber>774</IntrospectionStateNumber>
       <ObjectId>16398</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4214,58 +4214,57 @@ false Zulu
     <schema id="262" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>760</IntrospectionStateNumber>
+      <IntrospectionStateNumber>774</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <table id="263" parent="262" name="friendships">
-      <ObjectId>16404</ObjectId>
-      <StateNumber>759</StateNumber>
+      <ObjectId>16402</ObjectId>
+      <StateNumber>773</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="264" parent="262" name="users">
       <ObjectId>16399</ObjectId>
-      <StateNumber>749</StateNumber>
+      <StateNumber>769</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <column id="265" parent="263" name="first_id">
       <DataType>integer|0s</DataType>
       <Position>1</Position>
-      <StateNumber>756</StateNumber>
+      <StateNumber>772</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="266" parent="263" name="second_id">
       <DataType>integer|0s</DataType>
       <Position>2</Position>
-      <StateNumber>759</StateNumber>
+      <StateNumber>773</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="267" parent="264" name="id">
       <DataType>integer|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>742</StateNumber>
+      <StateNumber>766</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="268" parent="264" name="first_name">
       <DataType>varchar|0s</DataType>
       <Position>2</Position>
-      <StateNumber>745</StateNumber>
+      <StateNumber>767</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="269" parent="264" name="last_name">
       <DataType>varchar|0s</DataType>
       <Position>3</Position>
-      <StateNumber>746</StateNumber>
+      <StateNumber>768</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="270" parent="264" name="username">
       <DataType>varchar|0s</DataType>
       <Position>4</Position>
-      <StateNumber>749</StateNumber>
+      <StateNumber>769</StateNumber>
       <TypeId>1043</TypeId>
     </column>
   </database-model>

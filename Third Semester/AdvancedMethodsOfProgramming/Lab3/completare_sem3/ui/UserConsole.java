@@ -40,6 +40,8 @@ public class UserConsole {
         }
         catch (Error error) {
             System.out.println("An error has occurred" + error.getMessage());
+        } catch (RepositoryException e) {
+            System.out.println("User must be valid");
         }
     }
 
