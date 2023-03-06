@@ -1,210 +1,215 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-  <head>
-    <title>Exemplu formular</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    
-      
-  </head>
-  <body>
-    <h1>Formular de înscriere</h1>
-    <table border="1">
-      <form>
-        <tr>
-          <th bgcolor="MediumSeaGreen" colspan="3">Date personale</th>
-        </tr>
-        <tr>
-          <img alt="logo companie" src= "https://img.freepik.com/free-vector/gradient-car-service-logo_23-2149725123.jpg"
-        alt="Picture" width="400" height="200">
-        </tr>
-        <tr>
-          <td>
-            <label for="nume"><b>Nume:</b></label><br />
-            <input size="15" maxlength="15"type="text" id="nume" name="nume" /><br />
-          </td>
-          <td>
-            <label for="prenume">Prenume:</label><br />
-            <input maxlength="15" type="text" id="prenume" name="prenume" /><br />
-          </td>
-          <td>
-            <label for="data_nasterii">Data nașterii:</label>
-            <input type="date" id="data_nasterii" name="data_nasterii" max="2004-12-31" />
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="1">
-            <label for="exemplu_radio">Deții o mașină?</label>
-            <p>
-            <input type="radio" name="exemplu_radio" checked>Da</input>
-            </p>
-            <p>
-            <input type="radio" name="exemplu_radio">Nu</input>
-            </p>
-          </td>
-          <td>
-            <p>Ce servicii dorești?</p>
-            <p>Curățarea este obligatorie</p>
-            <input checked type="checkbox" id="optiune1" name="optiune1" value="Curatare">
-            <label for="optiune1"> Curățare</label><br>
-            <input type="checkbox" id="optiune2" name="optiune2" value="Reparare">
-            <label for="optiune2"> Reparare</label><br>
-            <input disabled type="checkbox" id="optiune3" name="optiune3" value="Modificare">
-            <label for="optiune3"> Modificare (Va urma)</label>
-            
-          </td>
-          <td bgcolor="BlanchedAlmond">
-            <table>
-              <tr>
-                <p align="center" valign="top">Listă  mărci mașini</p>
-              </tr>
-              <tr>
-                <ul>
-                  <li>Grupul VAG
-                    <ol start="20" type="A">
+<html lang="RO">
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplu formular</title>
+
+</head>
+<body>
+<h1>Formular de înscriere</h1>
+<img alt="logo companie" src= "https://img.freepik.com/free-vector/gradient-car-service-logo_23-2149725123.jpg"
+     width="400" height="200">
+
+<form action="ceva.php">
+  <table border="1" bgcolor="#faebd7">
+    <tr>
+      <th colspan="3">Date personale</th>
+    </tr>
+    <tr>
+      <td>
+        <label for="nume"><b>Nume:</b></label><br>
+        <input size="15" maxlength="15" type="text" id="nume" name="nume"><br>
+      </td>
+      <td>
+        <label for="prenume">Prenume:</label><br>
+        <input maxlength="15" type="text" id="prenume" name="prenume"><br>
+      </td>
+      <td>
+        <label for="data_nasterii">Data nașterii:</label>
+        <input type="text" id="data_nasterii" name="data_nasterii" >
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">
+        <label>Deții o mașină?</label>
+        <p>
+          <label>
+            <input type="radio" name="exemplu_radio" checked>
+          </label>Da
+        </p>
+        <p>
+          <label>
+            <input type="radio" name="exemplu_radio">
+          </label>Nu
+        </p>
+      </td>
+      <td>
+        <p>Ce servicii dorești?</p>
+        <p>Curățarea este obligatorie</p>
+        <input checked type="checkbox" id="optiune1" name="optiune1" value="Curatare">
+        <label for="optiune1"> Curățare</label><br>
+        <input type="checkbox" id="optiune2" name="optiune2" value="Reparare">
+        <label for="optiune2"> Reparare</label><br>
+        <input disabled type="checkbox" id="optiune3" name="optiune3" value="Modificare">
+        <label for="optiune3"> Modificare (Va urma)</label>
+
+      </td>
+      <td>
+        <table>
+          <tr>
+            <td><p>Listă  mărci mașini</p></td>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li>Grupul VAG
+                  <ol start="20" type="A">
                     <li><a href="https://www.audi.com/en.html" target="_blank">Audi</a></li>
                     <li>Seat</li>
                     <li>Skoda</li>
                   </ol>
-                </li> 
+                </li>
                 <li><strong>Grupul Renault</strong>
                   <ol type="i">
-                  <li>Renault</li>
-                  <li>Alpine</li>
-                  <li>Dacia</li>
-                </ol>
-              </li> 
-                </ul>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="codBPK">CodBPK:</label><br />
-            <input value="AS12GGK" readonly size="15" maxlength="15"type="text" id="codBPK" name="codBPK" /><br />
-          </td>
-          <td>
-            <label for="dropdown" valign="top">Ce tip de curățare?</label>
-            <select name="dropdown" multiple>
-                <option>Interior</option>
-                <option>Exterior</option>
-                <option>Interior + Exterior</option>
-            </select>
-          </td>
-          <td>
-            <div align="left" valign="center">
-            <label for="plata"> Mod de plată:</label>
+                    <li>Renault</li>
+                    <li>Alpine</li>
+                    <li>Dacia</li>
+                  </ol>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="codBPK">CodBPK:</label><br>
+        <input value="AS12GGK" readonly size="15" maxlength="15" type="text" id="codBPK" name="codBPK"><br>
+      </td>
+      <td>
+        <label>Ce tip de curățare?</label>
+        <select name="dropdown" multiple>
+          <option>Interior</option>
+          <option>Exterior</option>
+          <option>Interior + Exterior</option>
+        </select>
+      </td>
+      <td>
+        <div>
+          <label for="plata"> Mod de plată:</label>
 
-              <select id="plata">
-                <option value="card">Card</option>
-                <option value="cash" selected>Cash</option>
-              </select>
-            </div>
-            <div align="right" valign="center">
-              <label for="dropdown2" valign="top">Monedă</label>
+          <select id="plata">
+            <option value="card">Card</option>
+            <option value="cash" selected>Cash</option>
+          </select>
+        </div>
+        <div>
+          <label>Monedă
             <select name="dropdown2" multiple>
-                <option>Euro</option>
-                <option>Lei</option>
-                <option>Dolari</option>
+              <option>Euro</option>
+              <option>Lei</option>
+              <option>Dolari</option>
             </select>
-          </div>
-          </td>
+          </label>
+        </div>
+      </td>
 
-        </tr>
-        <tr>
-          <td>
-           
-              <label for="bacsis">Bacșiș</label>
-              <input type="number" id="bacsis" name="bacsis" min="0" step="5">
-              
-          </td>
-          <td>
-            <label for="mesaj">Mențiuni:</label>
-            <input type="text" id="adresa" name="mesaj"><br><br>
-          </td>
+    </tr>
+    <tr>
+      <td>
 
-          <td>
-            <fieldset>
-              <legend>Date de <span style="color:red">facturare</span>:</legend>
-              <label for="adresa">Adresă:</label>
-              <input type="text" id="adresa" name="adresa"><br><br>
-              <label for="CUI">CUI:</label>
-              <input type="text" id="CUI" name="CUI"><br><br>
-              <label for="email">Email:</label>
-              <input type="text" id="email" name="email"><br><br>
-            </fieldset>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-              <div align="center" valign="center">
-                <table bgcolor="Khaki">
-                  <tr>
-                    <td>
-                      <ul>Bomboane cadou
-                        <li>Ciocolata
-                          <ol start="1" type="I">
-                          <li>cu căpșuni</li>
-                          <li>cu banane</li>
-                        </ol>
-                      </li> 
-                      <li><b>Vanilie</bg>
-                        <ol type="a">
-                        <li>cu scorțișoară</li>
-                      </ol>
-                    </li> 
-                      </ul>
-                    </td>
-                    <td>
-                      <p>|</p>
-                      <p>|</p>
-                      <p>|</p>
-                      <p>|</p>
-                    </td>
-                    <td>
-                      <div valign="top">
-                      <label for="dropdown3">Alege</label>
-                      <select name="dropdown3" multiple>
-                          <option>Ciocolata cu căpșuni</option>
-                          <option>Ciocolata cu banane</option>
-                          <option>Vanilie cu scorțișoară</option>
-                      </select>
-                    </div>
-                    <br>
-                    <div valign="bottom">
-                      <label for="cantitate">Cantitate</label>
-                <input type="number" id="cantitate" name="cantitate" min="0" step="1">
-              </div>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-          </td>
-          <td>
-            <div>
-              
+        <label for="bacsis">Bacșiș</label>
+        <input type="text" id="bacsis" name="bacsis">
+
+      </td>
+      <td>
+        <label for="mesaj">Mențiuni:</label>
+        <input type="text" id="mesaj" name="mesaj"><br><br>
+      </td>
+
+      <td>
+        <fieldset>
+          <legend>Date de <span style="color:red">facturare</span>:</legend>
+          <label for="adresa2">Adresă:</label>
+          <input type="text" id="adresa2" name="adresa2"><br><br>
+          <label for="CUI">CUI:</label>
+          <input type="text" id="CUI" name="CUI"><br><br>
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email"><br><br>
+        </fieldset>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div>
+          <table>
+            <tr>
+              <td>
+                <p>Bomboane cadou</p>
+                <ul>
+                  <li>Ciocolata
+                    <ol start="1" type="I">
+                      <li>cu căpșuni</li>
+                      <li>cu banane</li>
+                    </ol>
+                  </li>
+                  <li><b>Vanilie</b>
+                    <ol type="a">
+                      <li>cu scorțișoară</li>
+                    </ol>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <p>|</p>
+                <p>|</p>
+                <p>|</p>
+                <p>|</p>
+              </td>
+              <td>
+                <div>
+                  <label>Alege
+                    <select name="dropdown3" multiple>
+                      <option>Ciocolata cu căpșuni</option>
+                      <option>Ciocolata cu banane</option>
+                      <option>Vanilie cu scorțișoară</option>
+                    </select>
+                  </label>
+                </div>
+                <br>
+                <div>
+                  <label for="cantitate">Cantitate</label>
+                  <input type="text" id="cantitate" name="cantitate">
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td>
+        <div>
+
               <textarea rows="5" cols="30">
                 Mulțumim pentru că ne-ai ales!. Încearcă bomboanele cadou!
-                
-                </textarea>
-             
-            </div>
-          </td>
-         
-        
-        </tr>
-        <tr>
-          <td colspan="3"> 
-            <div align="center" valign="center"> 
-              <input type="submit" value="Submit">
-            </div></td>
-        </tr>
-      </form>
-      <form>
 
-      </form>
-    </table>
-  </body>
+                </textarea>
+
+        </div>
+      </td>
+
+
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div>
+          <input type="submit" value="Submit">
+        </div></td>
+    </tr>
+  </table>
+</form>
+
+</body>
+
 </html>
