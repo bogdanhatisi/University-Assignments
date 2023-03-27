@@ -1,0 +1,40 @@
+body {
+  padding: 20px;
+}
+
+form > div {
+  margin: 0 0 20px 0;
+}
+
+#nume {
+  border: 2px solid #000000;
+  background: linear-gradient(to left, #000000 2px, transparent 0);
+  background-size: 18px 1px;
+  width: 354px;
+  font: 12px monaco, monospace;
+  letter-spacing: 11px;
+  text-indent: 6px;
+  text-transform: uppercase;
+}
+
+#prenume {
+  border: 2px solid #000000;
+  background: linear-gradient(to left, #000000 2px, transparent 0);
+  background-size: 18px 1px;
+  width: 354px;
+  font: 12px monaco, monospace;
+  letter-spacing: 11px;
+  text-indent: 6px;
+  text-transform: uppercase;
+}
+
+#cnp {
+  border: 2px solid #000000;
+  background: linear-gradient(to left, #000000 2px, transparent 0);
+  background-size: 18px 1px;
+  width: 228px;
+  font: 12px monaco, monospace;
+  letter-spacing: 11.1px;
+  text-indent: 6px;
+  text-transform: uppercase;
+}
