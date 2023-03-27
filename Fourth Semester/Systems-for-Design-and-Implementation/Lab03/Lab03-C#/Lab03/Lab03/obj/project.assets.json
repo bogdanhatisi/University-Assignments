@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Facultate\\Anul2\\Sem2\\MPP\\Lab03-C#\\Lab03\\Lab03\\Lab03.csproj",
+      "projectUniqueName": "C:\\Bogdan\\Facultate\\GitHub\\University-Assignments\\Fourth Semester\\Systems-for-Design-and-Implementation\\Lab03\\Lab03-C#\\Lab03\\Lab03\\Lab03.csproj",
       "projectName": "Lab03",
-      "projectPath": "D:\\Facultate\\Anul2\\Sem2\\MPP\\Lab03-C#\\Lab03\\Lab03\\Lab03.csproj",
+      "projectPath": "C:\\Bogdan\\Facultate\\GitHub\\University-Assignments\\Fourth Semester\\Systems-for-Design-and-Implementation\\Lab03\\Lab03-C#\\Lab03\\Lab03\\Lab03.csproj",
       "packagesPath": "C:\\Users\\Bogdan\\.nuget\\packages\\",
-      "outputPath": "D:\\Facultate\\Anul2\\Sem2\\MPP\\Lab03-C#\\Lab03\\Lab03\\obj\\",
+      "outputPath": "C:\\Bogdan\\Facultate\\GitHub\\University-Assignments\\Fourth Semester\\Systems-for-Design-and-Implementation\\Lab03\\Lab03-C#\\Lab03\\Lab03\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Bogdan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -51,7 +51,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -60,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
