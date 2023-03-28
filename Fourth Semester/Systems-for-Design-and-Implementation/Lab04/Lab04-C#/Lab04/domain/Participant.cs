@@ -8,16 +8,16 @@ namespace Lab03.domain
 {
     public class Participant : Identifiable<int>
     {
-
+        private int id;
         private String nume;
 
         private int varsta;
 
-        public Participant(String nume, int varsta)
+        public Participant(int id, string nume, int varsta)
         {
-            this.nume = this.nume;
-            this.varsta = this.varsta;
-            
+            this.id = id;
+            this.nume = nume;
+            this.varsta = varsta;
         }
 
         public String getNume()
@@ -40,7 +40,7 @@ namespace Lab03.domain
 
         public void setId(int id)
         {
-            throw new NotImplementedException();
+            this.setId(id);
         }
 
         int Identifiable<int>.getId()

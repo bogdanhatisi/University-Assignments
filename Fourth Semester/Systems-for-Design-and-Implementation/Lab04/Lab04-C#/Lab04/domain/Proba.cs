@@ -8,15 +8,16 @@ namespace Lab03.domain
 {
     public class Proba : Identifiable<int>
     {
-
+        private int id;
         private String stil;
 
         private int distanta;
 
-        public Proba(String stil, int distanta)
+        public Proba(int id, string stil, int distanta)
         {
-            this.stil = this.stil;
-            this.distanta = this.distanta;
+            this.id = id;
+            this.stil = stil;
+            this.distanta = distanta;
         }
 
         public String getStil()

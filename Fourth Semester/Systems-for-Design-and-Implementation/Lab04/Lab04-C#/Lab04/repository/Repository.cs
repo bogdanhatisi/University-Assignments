@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Lab03.repository
 {
-    public interface Repository<ID, T>
+    public interface Repository<T, ID>
     {
 
         void add(T elem);
 
         void update(ID id, T elem);
 
-        IEnumerator<T> findAll();
+        IEnumerable<T> findAll();
     }
 }

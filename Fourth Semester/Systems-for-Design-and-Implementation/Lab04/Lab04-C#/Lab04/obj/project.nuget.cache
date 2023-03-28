@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eEFIYt8jajm6C5ZFIB0TfTKrsA1jiHImhgiHXzS8oTSL4WrD0aqiYaUTtUpWHdEG/u8IgWuTZqTP4/2sOdMZLA==",
+  "dgSpecHash": "JTVsyIxaASOMgsY6HgkM5r3nSDPDfZJwa8LyJ71pAdyPnmRXra9l4rnMPw7oc8j6KTo0EcrODConPg5UF82YKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bogdan\\RiderProjects\\Lab04\\Lab04\\Lab04.csproj",
+  "projectFilePath": "D:\\Facultate\\GitHub\\University-Assignments\\Fourth Semester\\Systems-for-Design-and-Implementation\\Lab04\\Lab04-C#\\Lab04\\Lab04.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bogdan\\.nuget\\packages\\dbutils\\1.0.0\\dbutils.1.0.0.nupkg.sha512",
     "C:\\Users\\Bogdan\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
