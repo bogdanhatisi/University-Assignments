@@ -1,0 +1,5 @@
+C:\Users\Bogdan\RiderProjects\Lab04\Lab04\obj\Debug\net7.0\Lab04.csproj.AssemblyReference.cache
+C:\Users\Bogdan\RiderProjects\Lab04\Lab04\obj\Debug\net7.0\Lab04.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bogdan\RiderProjects\Lab04\Lab04\obj\Debug\net7.0\Lab04.AssemblyInfoInputs.cache
+C:\Users\Bogdan\RiderProjects\Lab04\Lab04\obj\Debug\net7.0\Lab04.AssemblyInfo.cs
+C:\Users\Bogdan\RiderProjects\Lab04\Lab04\obj\Debug\net7.0\Lab04.csproj.CoreCompileInputs.cache

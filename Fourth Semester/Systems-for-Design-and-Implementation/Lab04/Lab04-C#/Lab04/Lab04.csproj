@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="DbUtils" Version="1.0.0" />
+      <PackageReference Include="log4net" Version="2.0.15" />
+      <PackageReference Include="System.Data.SQLite" Version="1.0.117" />
+    </ItemGroup>
+
+</Project>

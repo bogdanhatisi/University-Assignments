@@ -1,0 +1,166 @@
+22 Mar 2023 14:03:09,476 INFO  Main 16 main - test
+22 Mar 2023 14:03:09,486 INFO  repository.ParticipantDBRepository 23 <init> - Initializing ParticipantDBRepository with properties: {} 
+22 Mar 2023 14:03:09,490 TRACE repository.ParticipantDBRepository 29 add - Enter saving taskdomain.Participant@47987356
+22 Mar 2023 14:03:09,491 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:03:09,491 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+22 Mar 2023 14:03:09,491 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... null
+22 Mar 2023 14:03:09,491 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+22 Mar 2023 14:03:09,492 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+22 Mar 2023 14:03:09,494 ERROR repository.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+22 Mar 2023 14:03:09,495 TRACE repository.JdbcUtils 57 getConnection - Exit
+22 Mar 2023 14:03:20,814 INFO  Main 16 main - test
+22 Mar 2023 14:03:20,827 INFO  repository.ParticipantDBRepository 23 <init> - Initializing ParticipantDBRepository with properties: {} 
+22 Mar 2023 14:03:20,832 TRACE repository.ParticipantDBRepository 29 add - Enter saving taskdomain.Participant@47987356
+22 Mar 2023 14:03:20,832 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:03:20,833 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+22 Mar 2023 14:03:20,833 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... null
+22 Mar 2023 14:03:20,833 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+22 Mar 2023 14:03:20,834 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+22 Mar 2023 14:03:20,837 ERROR repository.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+22 Mar 2023 14:03:20,838 TRACE repository.JdbcUtils 57 getConnection - Exit
+22 Mar 2023 14:04:01,001 INFO  Main 16 main - test
+22 Mar 2023 14:04:01,011 INFO  repository.ParticipantDBRepository 23 <init> - Initializing ParticipantDBRepository with properties: {} 
+22 Mar 2023 14:04:01,017 TRACE repository.ParticipantDBRepository 29 add - Enter saving taskdomain.Participant@47987356
+22 Mar 2023 14:04:01,018 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:04:01,018 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+22 Mar 2023 14:04:01,019 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... null
+22 Mar 2023 14:04:01,019 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+22 Mar 2023 14:04:01,019 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+22 Mar 2023 14:04:01,022 ERROR repository.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+22 Mar 2023 14:04:01,023 TRACE repository.JdbcUtils 57 getConnection - Exit
+22 Mar 2023 14:05:34,402 INFO  Main 16 main - test
+22 Mar 2023 14:05:34,412 INFO  repository.ParticipantDBRepository 23 <init> - Initializing ParticipantDBRepository with properties: {} 
+22 Mar 2023 14:05:34,417 TRACE repository.ParticipantDBRepository 29 add - Enter saving taskdomain.Participant@47987356
+22 Mar 2023 14:05:34,417 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:05:34,418 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+22 Mar 2023 14:05:34,418 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... null
+22 Mar 2023 14:05:34,419 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+22 Mar 2023 14:05:34,419 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+22 Mar 2023 14:05:34,422 ERROR repository.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+22 Mar 2023 14:05:34,424 TRACE repository.JdbcUtils 57 getConnection - Exit
+22 Mar 2023 14:06:06,793 INFO  Main 16 main - test
+22 Mar 2023 14:06:06,801 INFO  repository.ParticipantDBRepository 23 <init> - Initializing ParticipantDBRepository with properties: {} 
+22 Mar 2023 14:06:06,805 TRACE repository.ParticipantDBRepository 29 add - Enter saving taskdomain.Participant@47987356
+22 Mar 2023 14:06:06,805 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:06:06,807 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+22 Mar 2023 14:06:06,807 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... null
+22 Mar 2023 14:06:06,807 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+22 Mar 2023 14:06:06,808 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+22 Mar 2023 14:06:06,810 ERROR repository.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+22 Mar 2023 14:06:06,811 TRACE repository.JdbcUtils 57 getConnection - Exit
+22 Mar 2023 14:06:15,092 INFO  Main 16 main - test
+22 Mar 2023 14:06:15,102 INFO  repository.ParticipantDBRepository 23 <init> - Initializing ParticipantDBRepository with properties: {} 
+22 Mar 2023 14:06:15,107 TRACE repository.ParticipantDBRepository 29 add - Enter saving taskdomain.Participant@47987356
+22 Mar 2023 14:06:15,108 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:06:15,109 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+22 Mar 2023 14:06:15,109 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... null
+22 Mar 2023 14:06:15,110 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+22 Mar 2023 14:06:15,111 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+22 Mar 2023 14:06:15,115 ERROR repository.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+22 Mar 2023 14:06:15,116 TRACE repository.JdbcUtils 57 getConnection - Exit
+22 Mar 2023 14:06:34,640 INFO  Main 16 main - test
+22 Mar 2023 14:08:49,952 INFO  Main 16 main - test
+22 Mar 2023 14:08:49,960 INFO  repository.ParticipantDBRepository 23 <init> - Initializing ParticipantDBRepository with properties: {} 
+22 Mar 2023 14:08:49,963 TRACE repository.ParticipantDBRepository 29 add - Enter saving taskdomain.Participant@47987356
+22 Mar 2023 14:08:49,964 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:08:49,964 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+22 Mar 2023 14:08:49,965 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... null
+22 Mar 2023 14:08:49,965 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+22 Mar 2023 14:08:49,965 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+22 Mar 2023 14:08:49,968 ERROR repository.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+22 Mar 2023 14:08:49,969 TRACE repository.JdbcUtils 57 getConnection - Exit
+22 Mar 2023 14:10:29,859 INFO  Main 16 main - test
+22 Mar 2023 14:10:29,867 INFO  repository.ParticipantDBRepository 23 <init> - Initializing ParticipantDBRepository with properties: {} 
+22 Mar 2023 14:10:29,870 TRACE repository.ParticipantDBRepository 29 add - Enter saving taskdomain.Participant@47987356
+22 Mar 2023 14:10:29,871 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:10:29,871 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+22 Mar 2023 14:10:29,872 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... null
+22 Mar 2023 14:10:29,872 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+22 Mar 2023 14:10:29,873 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+22 Mar 2023 14:10:29,875 ERROR repository.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+22 Mar 2023 14:10:29,877 TRACE repository.JdbcUtils 57 getConnection - Exit
+22 Mar 2023 14:11:23,113 INFO  Main 16 main - test
+22 Mar 2023 14:11:23,124 INFO  repository.ParticipantDBRepository 23 <init> - Initializing ParticipantDBRepository with properties: {} 
+22 Mar 2023 14:11:23,129 TRACE repository.ParticipantDBRepository 29 add - Enter saving taskdomain.Participant@47987356
+22 Mar 2023 14:11:23,130 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:11:23,130 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+22 Mar 2023 14:11:23,130 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... null
+22 Mar 2023 14:11:23,131 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+22 Mar 2023 14:11:23,131 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+22 Mar 2023 14:11:23,135 ERROR repository.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+22 Mar 2023 14:11:23,136 TRACE repository.JdbcUtils 57 getConnection - Exit
+22 Mar 2023 14:11:35,345 INFO  Main 16 main - test
+22 Mar 2023 14:11:35,355 INFO  repository.ParticipantDBRepository 23 <init> - Initializing ParticipantDBRepository with properties: {} 
+22 Mar 2023 14:11:35,360 TRACE repository.ParticipantDBRepository 29 add - Enter saving taskdomain.Participant@47987356
+22 Mar 2023 14:11:35,361 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:11:35,361 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+22 Mar 2023 14:11:35,362 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... null
+22 Mar 2023 14:11:35,362 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+22 Mar 2023 14:11:35,362 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+22 Mar 2023 14:11:35,365 ERROR repository.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+22 Mar 2023 14:11:35,366 TRACE repository.JdbcUtils 57 getConnection - Exit
+22 Mar 2023 14:12:09,110 INFO  Main 16 main - test
+22 Mar 2023 14:12:09,119 INFO  repository.ParticipantDBRepository 23 <init> - Initializing ParticipantDBRepository with properties: {} 
+22 Mar 2023 14:12:09,122 TRACE repository.ParticipantDBRepository 29 add - Enter saving taskdomain.Participant@47987356
+22 Mar 2023 14:12:09,124 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:12:09,124 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+22 Mar 2023 14:12:09,124 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... null
+22 Mar 2023 14:12:09,124 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+22 Mar 2023 14:12:09,125 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+22 Mar 2023 14:12:09,127 ERROR repository.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+22 Mar 2023 14:12:09,128 TRACE repository.JdbcUtils 57 getConnection - Exit
+22 Mar 2023 14:12:13,480 INFO  Main 16 main - test
+22 Mar 2023 14:12:13,488 INFO  repository.ParticipantDBRepository 23 <init> - Initializing ParticipantDBRepository with properties: {} 
+22 Mar 2023 14:12:13,491 TRACE repository.ParticipantDBRepository 29 add - Enter saving taskdomain.Participant@47987356
+22 Mar 2023 14:12:13,492 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:12:13,492 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+22 Mar 2023 14:12:13,492 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... null
+22 Mar 2023 14:12:13,493 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+22 Mar 2023 14:12:13,493 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+22 Mar 2023 14:12:13,495 ERROR repository.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+22 Mar 2023 14:12:13,495 TRACE repository.JdbcUtils 57 getConnection - Exit
+22 Mar 2023 14:12:56,140 INFO  Main 16 main - test
+22 Mar 2023 14:12:56,146 INFO  repository.ParticipantDBRepository 23 <init> - Initializing ParticipantDBRepository with properties: {jdbc.url=jdbc:sqlite:C:\Bogdan\Facultate\Sem2\MPP\Lab04-Java\identifier.sqlite} 
+22 Mar 2023 14:12:56,149 TRACE repository.ParticipantDBRepository 29 add - Enter saving taskdomain.Participant@7205765b
+22 Mar 2023 14:12:56,149 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:12:56,149 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+22 Mar 2023 14:12:56,150 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:\Bogdan\Facultate\Sem2\MPP\Lab04-Java\identifier.sqlite
+22 Mar 2023 14:12:56,150 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+22 Mar 2023 14:12:56,151 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+22 Mar 2023 14:12:57,067 TRACE repository.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@514646ef)
+22 Mar 2023 14:12:57,079 TRACE repository.ParticipantDBRepository 38 add - Saved 1 instances
+22 Mar 2023 14:12:57,080 TRACE repository.ParticipantDBRepository 45 add - Exit
+22 Mar 2023 14:12:57,081 TRACE repository.ParticipantDBRepository 55 findAll - Enter
+22 Mar 2023 14:12:57,081 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:12:57,082 TRACE repository.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@514646ef)
+22 Mar 2023 14:12:57,083 TRACE repository.ParticipantDBRepository 76 findAll - Exit with([domain.Participant@3f4faf53])
+22 Mar 2023 14:13:24,020 INFO  Main 16 main - test
+22 Mar 2023 14:13:24,030 INFO  repository.ParticipantDBRepository 23 <init> - Initializing ParticipantDBRepository with properties: {jdbc.url=jdbc:sqlite:C:\Bogdan\Facultate\Sem2\MPP\Lab04-Java\identifier.sqlite} 
+22 Mar 2023 14:13:24,034 TRACE repository.ParticipantDBRepository 29 add - Enter saving taskdomain.Participant@7205765b
+22 Mar 2023 14:13:24,035 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:13:24,035 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+22 Mar 2023 14:13:24,036 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:\Bogdan\Facultate\Sem2\MPP\Lab04-Java\identifier.sqlite
+22 Mar 2023 14:13:24,037 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+22 Mar 2023 14:13:24,037 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+22 Mar 2023 14:13:24,236 TRACE repository.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@514646ef)
+22 Mar 2023 14:13:24,243 TRACE repository.ParticipantDBRepository 38 add - Saved 1 instances
+22 Mar 2023 14:13:24,243 TRACE repository.ParticipantDBRepository 45 add - Exit
+22 Mar 2023 14:13:24,244 TRACE repository.ParticipantDBRepository 55 findAll - Enter
+22 Mar 2023 14:13:24,244 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:13:24,244 TRACE repository.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@514646ef)
+22 Mar 2023 14:13:24,245 TRACE repository.ParticipantDBRepository 76 findAll - Exit with([domain.Participant@3f4faf53, domain.Participant@7fd50002])
+22 Mar 2023 14:51:30,904 INFO  Main 16 main - test
+22 Mar 2023 14:51:30,915 INFO  repository.ParticipantDBRepository 23 <init> - Initializing ParticipantDBRepository with properties: {jdbc.url=jdbc:sqlite:C:\Bogdan\Facultate\Sem2\MPP\Lab04-Java\identifier.sqlite} 
+22 Mar 2023 14:51:30,920 TRACE repository.ParticipantDBRepository 29 add - Enter saving taskdomain.Participant@7205765b
+22 Mar 2023 14:51:30,921 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:51:30,921 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+22 Mar 2023 14:51:30,922 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:\Bogdan\Facultate\Sem2\MPP\Lab04-Java\identifier.sqlite
+22 Mar 2023 14:51:30,922 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+22 Mar 2023 14:51:30,922 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+22 Mar 2023 14:51:31,243 TRACE repository.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@514646ef)
+22 Mar 2023 14:51:31,251 TRACE repository.ParticipantDBRepository 38 add - Saved 1 instances
+22 Mar 2023 14:51:31,251 TRACE repository.ParticipantDBRepository 45 add - Exit
+22 Mar 2023 14:51:31,252 TRACE repository.ParticipantDBRepository 55 findAll - Enter
+22 Mar 2023 14:51:31,252 TRACE repository.JdbcUtils 48 getConnection - Enter
+22 Mar 2023 14:51:31,254 TRACE repository.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@514646ef)
+22 Mar 2023 14:51:31,255 TRACE repository.ParticipantDBRepository 76 findAll - Exit with([domain.Participant@3f4faf53, domain.Participant@7fd50002, domain.Participant@533bda92])
