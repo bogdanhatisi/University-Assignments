@@ -1285,11 +1285,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Facultate\\GitHub\\University-Assignments\\Fourth Semester\\Systems-for-Design-and-Implementation\\Lab04\\Lab04-C#\\Lab04\\Lab04.csproj",
+      "projectUniqueName": "C:\\Bogdan\\Facultate\\GitHub\\University-Assignments\\Fourth Semester\\Systems-for-Design-and-Implementation\\Lab04\\Lab04-C#\\Lab04\\Lab04.csproj",
       "projectName": "Lab04",
-      "projectPath": "D:\\Facultate\\GitHub\\University-Assignments\\Fourth Semester\\Systems-for-Design-and-Implementation\\Lab04\\Lab04-C#\\Lab04\\Lab04.csproj",
+      "projectPath": "C:\\Bogdan\\Facultate\\GitHub\\University-Assignments\\Fourth Semester\\Systems-for-Design-and-Implementation\\Lab04\\Lab04-C#\\Lab04\\Lab04.csproj",
       "packagesPath": "C:\\Users\\Bogdan\\.nuget\\packages\\",
-      "outputPath": "D:\\Facultate\\GitHub\\University-Assignments\\Fourth Semester\\Systems-for-Design-and-Implementation\\Lab04\\Lab04-C#\\Lab04\\obj\\",
+      "outputPath": "C:\\Bogdan\\Facultate\\GitHub\\University-Assignments\\Fourth Semester\\Systems-for-Design-and-Implementation\\Lab04\\Lab04-C#\\Lab04\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Bogdan\\AppData\\Roaming\\NuGet\\NuGet.Config",
