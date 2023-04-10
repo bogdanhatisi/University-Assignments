@@ -78,6 +78,6 @@ public class ProbeParticipantDBRepository implements ProbeParticipantRepository{
         }
         logger.traceExit(participants);
         return participants;
-        return null;
+
     }
 }

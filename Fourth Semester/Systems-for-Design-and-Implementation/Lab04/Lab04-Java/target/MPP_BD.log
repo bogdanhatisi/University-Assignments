@@ -164,3 +164,28 @@
 22 Mar 2023 14:51:31,252 TRACE repository.JdbcUtils 48 getConnection - Enter
 22 Mar 2023 14:51:31,254 TRACE repository.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@514646ef)
 22 Mar 2023 14:51:31,255 TRACE repository.ParticipantDBRepository 76 findAll - Exit with([domain.Participant@3f4faf53, domain.Participant@7fd50002, domain.Participant@533bda92])
+04 Apr 2023 23:22:40,712 INFO  Main 16 main - test
+04 Apr 2023 23:22:40,723 INFO  repository.ParticipantDBRepository 23 <init> - Initializing ParticipantDBRepository with properties: {jdbc.url=jdbc:sqlite:C:\Bogdan\Facultate\Sem2\MPP\Lab04-Java\identifier.sqlite} 
+04 Apr 2023 23:22:40,726 TRACE repository.ParticipantDBRepository 29 add - Enter saving taskdomain.Participant@7205765b
+04 Apr 2023 23:22:40,726 TRACE repository.JdbcUtils 48 getConnection - Enter
+04 Apr 2023 23:22:40,726 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+04 Apr 2023 23:22:40,727 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:\Bogdan\Facultate\Sem2\MPP\Lab04-Java\identifier.sqlite
+04 Apr 2023 23:22:40,727 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+04 Apr 2023 23:22:40,727 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+04 Apr 2023 23:22:40,754 ERROR repository.JdbcUtils 41 getNewConnection - java.sql.SQLException: path to 'C:\Bogdan\Facultate\Sem2\MPP\Lab04-Java\identifier.sqlite': 'C:\Bogdan' does not exist
+04 Apr 2023 23:22:40,755 TRACE repository.JdbcUtils 57 getConnection - Exit
+04 Apr 2023 23:24:04,317 INFO  Main 16 main - test
+04 Apr 2023 23:24:04,322 INFO  repository.ParticipantDBRepository 23 <init> - Initializing ParticipantDBRepository with properties: {jdbc.url=jdbc:sqlite:D:\Facultate\GitHub\University-Assignments\Fourth Semester\Systems-for-Design-and-Implementation\Lab04\Lab04-Java\identifier.sqlite} 
+04 Apr 2023 23:24:04,325 TRACE repository.ParticipantDBRepository 29 add - Enter saving taskdomain.Participant@7205765b
+04 Apr 2023 23:24:04,325 TRACE repository.JdbcUtils 48 getConnection - Enter
+04 Apr 2023 23:24:04,325 TRACE repository.JdbcUtils 25 getNewConnection - Enter
+04 Apr 2023 23:24:04,326 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:D:\Facultate\GitHub\University-Assignments\Fourth Semester\Systems-for-Design-and-Implementation\Lab04\Lab04-Java\identifier.sqlite
+04 Apr 2023 23:24:04,326 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+04 Apr 2023 23:24:04,326 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+04 Apr 2023 23:24:04,574 TRACE repository.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@514646ef)
+04 Apr 2023 23:24:04,670 TRACE repository.ParticipantDBRepository 38 add - Saved 1 instances
+04 Apr 2023 23:24:04,671 TRACE repository.ParticipantDBRepository 45 add - Exit
+04 Apr 2023 23:24:04,671 TRACE repository.ParticipantDBRepository 55 findAll - Enter
+04 Apr 2023 23:24:04,671 TRACE repository.JdbcUtils 48 getConnection - Enter
+04 Apr 2023 23:24:04,672 TRACE repository.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@514646ef)
+04 Apr 2023 23:24:04,672 TRACE repository.ParticipantDBRepository 76 findAll - Exit with([domain.Participant@3f4faf53, domain.Participant@7fd50002, domain.Participant@533bda92, domain.Participant@304bb45b])
