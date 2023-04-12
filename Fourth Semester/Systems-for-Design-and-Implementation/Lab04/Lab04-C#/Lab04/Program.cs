@@ -2,6 +2,7 @@
 using System.Configuration;
 using Lab03.domain;
 using Lab03.repository;
+using log4net;
 using log4net.Config;
 
 namespace Lab04
@@ -11,9 +12,11 @@ namespace Lab04
         static void Main(String[] args)
         {
 
-            // XmlConfigurator.Configure(new System.IO.FileInfo(args[0]));
+            XmlConfigurator.Configure(new System.IO.FileInfo(args[0]));
             Console.WriteLine("Configuration Settings for ConcursInot {0}", GetConnectionStringByName("ConcursInot"));
-
+            
+            ILog log = LogManager.GetLogger("ProbaDBRepository");
+            
             IDictionary<String, string> props = new SortedList<String, String>();
             props.Add("ConnectionString", GetConnectionStringByName("ConcursInot"));
 

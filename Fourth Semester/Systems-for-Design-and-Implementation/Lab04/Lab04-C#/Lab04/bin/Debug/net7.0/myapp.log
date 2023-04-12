@@ -1,0 +1,4 @@
+2023-03-29 12:59:19,001 [1] INFO ProbaDBRepository - Creating ProbaDBRepository
+2023-03-29 12:59:19,018 [1] INFO ProbaDBRepository - Entering findById Proba with value 1 
+2023-03-29 12:59:19,134 [1] INFO ProbaDBRepository - Exiting findById with value {0}
+2023-03-29 12:59:19,138 [1] INFO ProbaDBRepository - Exiting findAll with value {0}
