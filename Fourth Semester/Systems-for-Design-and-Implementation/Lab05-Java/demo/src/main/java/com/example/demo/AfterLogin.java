@@ -1,6 +1,8 @@
 package com.example.demo;
 
 import com.example.demo.domain.Proba;
+import com.example.demo.domain.ProbaParticipanti;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -18,7 +20,8 @@ public class AfterLogin {
     private Label afterLog;
 
     @FXML
-    private TableView<Proba> tableCategories;
+    private TableView<ProbaParticipanti> tableCategories;
+
 
     private static <E> void initialize_table(TableView<E> tabel, List<String> columnNames) {
         for (String columnName : columnNames) {
@@ -30,6 +33,7 @@ public class AfterLogin {
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initialize_table(tableCategories, Arrays.asList("Proba","Participanti"));
-        tableCategories.setItems(list);
+        ObservableList<ProbaParticipanti> probe = service.getProbeParticipanti()
+       tableCategories.setItems();
     }
 }

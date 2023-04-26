@@ -79,4 +79,26 @@ public class ProbeParticipantDBRepository implements ProbeParticipantRepository{
         return participants;
 
     }
+
+
+    public int getNumarParticipanti(String stil,Integer distanta )
+    {
+        logger.traceEntry();
+        Connection con=dbUtils.getConnection();
+        List<ProbeParticipant> participants = new ArrayList<>();
+        try(PreparedStatement preStmt=con.prepareStatement("select * from ProbeParticipant inner join Proba p on p.id_proba = p.id inner join Participant pa on pa.id_participant = pa.id where p.stil"))
+        {try(ResultSet result=preStmt.executeQuery()) {
+            while (result.next())
+            {
+            }
+        }
+
+        } catch(SQLException e)
+        {
+            logger.error(e);
+            System.err.println("Error DB"+e);
+        }
+        logger.traceExit(participants);
+        return participants;
+    }
 }

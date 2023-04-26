@@ -214,6 +214,6 @@ def shortestPath(graph, pop_size=50,generations=50,eval_function=calculate_dista
 
 if __name__ == "__main__":
     graph = read_graph_from_file("medium01.txt")
-    result = shortestPath(graph, 1000, 500)
+    result = shortestPath(graph, 500, 100)
     for res in result:
         print(res)
