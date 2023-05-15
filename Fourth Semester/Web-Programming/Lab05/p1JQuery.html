@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Problema nr 1</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <h2>First List</h2>
+    <select id="first" multiple="multiple">
+      <option value="Conor Mcgregor">Conor Mcgregor</option>
+      <option value="Option2">Michael Chandler</option>
+      <option value="Option3">Jon Jones</option>
+    </select>
+
+    <h2>Second List</h2>
+    <select id="second" multiple="multiple">
+      <option value="Option">Jose Aldo</option>
+      <option value="Option2">Chael Sonnen</option>
+      <option value="Option3">Stipe Miocik</option>
+    </select>
+    <script>
+      $("#first").on("dblclick", function () {
+        const elem = $(this).find("option:selected").remove().clone();
+        $("#second").append(elem);
+      });
+
+      $("#second").on("dblclick", function () {
+        const elem = $(this).find("option:selected").remove().clone();
+        $("#first").append(elem);
+      });
+    </script>
+  </body>
+</html>

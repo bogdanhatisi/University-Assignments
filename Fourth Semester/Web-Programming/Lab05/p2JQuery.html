@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Validation</title>
+    <meta charset="utf-8" />
+    <style>
+      .error {
+        color: red;
+      }
+
+      .invalid {
+        border: 1px solid red;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script>
+      function validateForm() {
+        const name = $("#name");
+        const email = $("#email");
+        const age = $("#age");
+        const birthdate = $("#birthdate");
+
+        // Reset error messages and remove invalid class
+        $("#nameError").text("");
+        $("#emailError").text("");
+        $("#ageError").text("");
+        $("#birthdateError").text("");
+        name.removeClass("invalid");
+        email.removeClass("invalid");
+        age.removeClass("invalid");
+        birthdate.removeClass("invalid");
+
+        let isValid = true;
+
+        // Validate name
+        if (name.val().trim() === "") {
+          $("#nameError").text("Name is required");
+          name.addClass("invalid");
+          isValid = false;
+        }
+
+        // Validate email
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (
+          email.val().trim() === "" ||
+          !emailPattern.test(email.val().trim())
+        ) {
+          $("#emailError").text("Invalid email address");
+          email.addClass("invalid");
+          isValid = false;
+        }
+
+        // Validate age
+        if (age.val().trim() === "" || isNaN(age.val().trim())) {
+          $("#ageError").text("Age must be a number");
+          age.addClass("invalid");
+          isValid = false;
+        }
+
+        // Validate birthdate
+        if (birthdate.val().trim() === "") {
+          $("#birthdateError").text("Birthdate is required");
+          birthdate.addClass("invalid");
+          isValid = false;
+        }
+
+        if (isValid) {
+          alert("Everything is completed correctly!");
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>Registration Form</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+      <span id="nameError" class="error"></span>
+
+      <br /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+      <span id="emailError" class="error"></span>
+
+      <br /><br />
+
+      <label for="age">Age:</label>
+      <input type="text" id="age" name="age" />
+      <span id="ageError" class="error"></span>
+
+      <br /><br />
+
+      <label for="birthdate">Birthdate:</label>
+      <input type="date" id="birthdate" name="birthdate" />
+      <span id="birthdateError" class="error"></span>
+
+      <br /><br />
+
+      <input type="button" value="Submit" onclick="validateForm()" />
+    </form>
+  </body>
+</html>
