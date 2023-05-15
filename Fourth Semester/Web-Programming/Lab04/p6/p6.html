@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+
+      table td {
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      .empty-cell {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="puzzle-table"></table>
+
+    <script>
+      const tableSize = 4; // Dimensiunea tabelului (n x n)
+      let emptyCellRow; // Rândul celulei goale
+      let emptyCellCol; // Coloana celulei goale
+
+      function initializeTable() {
+        const table = document.getElementById("puzzle-table");
+        let num = 1;
+
+        for (let i = 0; i < tableSize; i++) {
+          const row = document.createElement("tr");
+
+          for (let j = 0; j < tableSize; j++) {
+            const cell = document.createElement("td");
+
+            cell.textContent = num++;
+            if (i == tableSize - 1 && j == tableSize - 1) {
+              cell.textContent = "";
+            }
+            row.appendChild(cell);
+
+            // Verificăm ultima celulă pentru a marca ca fiind celulă goală
+            if (i === tableSize - 1 && j === tableSize - 1) {
+              cell.classList.add("empty-cell");
+              emptyCellRow = i;
+              emptyCellCol = j;
+            }
+          }
+
+          table.appendChild(row);
+        }
+      }
+
+      function isValidPosition(row, col) {
+        return row >= 0 && row < tableSize && col >= 0 && col < tableSize;
+      }
+
+      function isAdjacentToEmptyCell(row, col) {
+        return (
+          (row === emptyCellRow && Math.abs(col - emptyCellCol) === 1) ||
+          (col === emptyCellCol && Math.abs(row - emptyCellRow) === 1)
+        );
+      }
+
+      function moveCell(row, col) {
+        if (isAdjacentToEmptyCell(row, col)) {
+          const table = document.getElementById("puzzle-table");
+          const selectedCell = table.rows[row].cells[col];
+          const emptyCell = table.rows[emptyCellRow].cells[emptyCellCol];
+
+          // Interschimbăm conținutul celulelor
+          const temp = selectedCell.textContent;
+          selectedCell.textContent = emptyCell.textContent;
+          emptyCell.textContent = temp;
+
+          // Actualizăm poziția celulei goale
+          emptyCellRow = row;
+          emptyCellCol = col;
+        }
+      }
+
+      document.addEventListener("keydown", function (event) {
+        let newRow = emptyCellRow;
+        let newCol = emptyCellCol;
+
+        switch (event.key) {
+          case "ArrowUp":
+            newRow--;
+            break;
+          case "ArrowDown":
+            newRow++;
+            break;
+          case "ArrowLeft":
+            newCol--;
+            break;
+          case "ArrowRight":
+            newCol++;
+            break;
+          default:
+            return; // Ignorăm tastele care nu sunt sageti
+        }
+
+        if (isValidPosition(newRow, newCol)) {
+          moveCell(newRow, newCol);
+        }
+      });
+
+      initializeTable();
+    </script>
+  </body>
+</html>
