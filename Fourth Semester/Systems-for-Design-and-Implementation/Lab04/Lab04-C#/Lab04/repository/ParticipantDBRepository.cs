@@ -38,10 +38,12 @@ public class ParticipantDBRepository: ParticipantRepository
             {
                 while (dataR.Read())
                 {
-                    Int32 id = dataR.GetInt32(2);
+                    
+                    
                     String nume = dataR.GetString(0);
                     Int32 varsta = dataR.GetInt32(1);
-                    Participant par = new Participant(id,nume,varsta);
+                    Int32 id = dataR.GetInt32(2);
+                    Participant par = new Participant(id, nume, varsta);
                     participanti.Add(par);
                 }
             }

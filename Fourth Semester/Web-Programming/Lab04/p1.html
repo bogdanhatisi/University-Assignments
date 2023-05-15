@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Problema nr 1</title>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <h2>First List</h2>
+    <select id="first" multiple="multiple">
+      <option value="Conor Mcgregor">Conor Mcgregor</option>
+      <option value="Option2">Michael Chandler</option>
+      <option value="Option3">Jon Jones</option>
+    </select>
+
+    <h2>Second List</h2>
+    <select id="second" multiple="multiple">
+      <option value="Option">Jose Aldo</option>
+      <option value="Option2">Chael Sonnen</option>
+      <option value="Option3">Stipe Miocik</option>
+    </select>
+    <script>
+      first.addEventListener("dblclick", function (e) {
+        if (e.target != this) {
+          second.appendChild(e.target.cloneNode(true));
+          e.target.remove();
+        }
+      });
+
+      second.addEventListener("dblclick", function (e) {
+        if (e.target != this) {
+          first.appendChild(e.target.cloneNode(true));
+          e.target.remove();
+        }
+      });
+    </script>
+  </body>
+</html>

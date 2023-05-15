@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Validation</title>
+    <meta charset="utf-8" />
+    <style>
+      .error {
+        color: red;
+      }
+
+      .invalid {
+        border: 1px solid red;
+      }
+    </style>
+    <script>
+      function validateForm() {
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const age = document.getElementById("age");
+        const birthdate = document.getElementById("birthdate");
+
+        // Reset error messages and remove invalid class
+        document.getElementById("nameError").textContent = "";
+        document.getElementById("emailError").textContent = "";
+        document.getElementById("ageError").textContent = "";
+        document.getElementById("birthdateError").textContent = "";
+        name.classList.remove("invalid");
+        email.classList.remove("invalid");
+        age.classList.remove("invalid");
+        birthdate.classList.remove("invalid");
+
+        let isValid = true;
+
+        // Validate name
+        if (name.value.trim() === "") {
+          document.getElementById("nameError").textContent = "Name is required";
+          name.classList.add("invalid");
+          isValid = false;
+        }
+
+        // Validate email
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (
+          email.value.trim() === "" ||
+          !emailPattern.test(email.value.trim())
+        ) {
+          document.getElementById("emailError").textContent =
+            "Invalid email address";
+          email.classList.add("invalid");
+          isValid = false;
+        }
+
+        // Validate age
+        if (age.value.trim() === "" || isNaN(age.value.trim())) {
+          document.getElementById("ageError").textContent =
+            "Age must be a number";
+          age.classList.add("invalid");
+          isValid = false;
+        }
+
+        // Validate birthdate
+        if (birthdate.value.trim() === "") {
+          document.getElementById("birthdateError").textContent =
+            "Birthdate is required";
+          birthdate.classList.add("invalid");
+          isValid = false;
+        }
+
+        if (isValid) {
+          alert("Everything is completed correctly!");
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>Registration Form</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+      <span id="nameError" class="error"></span>
+
+      <br /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+      <span id="emailError" class="error"></span>
+
+      <br /><br />
+
+      <label for="age">Age:</label>
+      <input type="text" id="age" name="age" />
+      <span id="ageError" class="error"></span>
+
+      <br /><br />
+
+      <label for="birthdate">Birthdate:</label>
+      <input type="date" id="birthdate" name="birthdate" />
+      <span id="birthdateError" class="error"></span>
+
+      <br /><br />
+
+      <input type="button" value="Submit" onclick="validateForm()" />
+    </form>
+  </body>
+</html>

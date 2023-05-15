@@ -12,7 +12,7 @@ namespace Lab04
         static void Main(String[] args)
         {
 
-            XmlConfigurator.Configure(new System.IO.FileInfo(args[0]));
+            XmlConfigurator.Configure(new System.IO.FileInfo("App.config"));
             Console.WriteLine("Configuration Settings for ConcursInot {0}", GetConnectionStringByName("ConcursInot"));
             
             ILog log = LogManager.GetLogger("ProbaDBRepository");
@@ -31,6 +31,8 @@ namespace Lab04
             foreach(Participant part in participantRepo.findAll()){
                 Console.WriteLine(part.getNume());
             }
+
+            Console.ReadLine();
         }
         
         static string GetConnectionStringByName(string name)
