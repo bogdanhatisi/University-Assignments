@@ -60,11 +60,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bogdan\\Desktop\\Year02\\2nd semester\\MPP\\Lab\\mpp-proiect-csharp-AlexandruPaul21\\TestApi\\TestApi\\TestApi.csproj",
+      "projectUniqueName": "C:\\Bogdan\\Facultate\\GitHub\\University-Assignments\\Fourth Semester\\Systems-for-Design-and-Implementation\\C#API\\TestApi\\TestApi\\TestApi.csproj",
       "projectName": "TestApi",
-      "projectPath": "C:\\Users\\Bogdan\\Desktop\\Year02\\2nd semester\\MPP\\Lab\\mpp-proiect-csharp-AlexandruPaul21\\TestApi\\TestApi\\TestApi.csproj",
+      "projectPath": "C:\\Bogdan\\Facultate\\GitHub\\University-Assignments\\Fourth Semester\\Systems-for-Design-and-Implementation\\C#API\\TestApi\\TestApi\\TestApi.csproj",
       "packagesPath": "C:\\Users\\Bogdan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bogdan\\Desktop\\Year02\\2nd semester\\MPP\\Lab\\mpp-proiect-csharp-AlexandruPaul21\\TestApi\\TestApi\\obj\\",
+      "outputPath": "C:\\Bogdan\\Facultate\\GitHub\\University-Assignments\\Fourth Semester\\Systems-for-Design-and-Implementation\\C#API\\TestApi\\TestApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Bogdan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -104,7 +104,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -113,7 +114,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

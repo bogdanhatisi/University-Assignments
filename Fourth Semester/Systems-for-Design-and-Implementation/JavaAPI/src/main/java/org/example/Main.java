@@ -18,7 +18,7 @@ public class Main {
         }
 
         try {
-            System.out.println(restTest.getById("2"));
+            System.out.println(restTest.getById("4"));
         } catch (ServiceException e) {
             e.printStackTrace();
         }

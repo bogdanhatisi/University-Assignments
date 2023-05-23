@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -21,6 +22,32 @@ public class ProbaDBRepository  implements  ProbaRepository{
 
 
     private static final Logger logger= LogManager.getLogger();
+
+    private int getMaxId(){
+
+        Connection con = dbUtils.getConnection();
+
+
+        try(PreparedStatement preStnt=con.prepareStatement("SELECT MAX(id) from Proba"))
+        {
+
+
+
+            ResultSet result=preStnt.executeQuery();
+
+           if(result.next()){
+               return result.getInt(1);
+           }
+        }
+        catch (SQLException ex)
+        {
+            logger.error(ex);
+            System.err.println("Error DB"+ex);
+            logger.traceExit();
+            return 0;
+        }
+        return 0;
+    }
 
 
     @Autowired
@@ -44,6 +71,8 @@ public class ProbaDBRepository  implements  ProbaRepository{
 
             logger.trace("Saved {} instances", result);
             logger.traceExit();
+            int newId = getMaxId();
+            elem.setId(newId);
             return elem;
         }
         catch (SQLException ex)

@@ -9,12 +9,16 @@ import java.time.LocalDateTime;
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class Proba implements Identifiable<Integer>,Serializable{
 
+    private int ID;
     private String stil;
     private Integer distanta;
 
     public Proba(String stil, Integer distanta) {
         this.stil = stil;
         this.distanta = distanta;
+    }
+
+    public Proba() {
     }
 
     public String getStil() {
@@ -35,11 +39,11 @@ public class Proba implements Identifiable<Integer>,Serializable{
 
     @Override
     public void setId(Integer id) {
-
+        ID= id;
     }
 
     @Override
-    public Integer getId() {return null;
+    public Integer getId() {return ID;
     }
 
     @Override

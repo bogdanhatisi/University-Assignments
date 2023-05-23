@@ -15,9 +15,9 @@ for (int i = 0; i < probe.Length; i++)
 var proba = await client.GetById(4);
 Console.WriteLine(proba.ToString());
 
-var newProba = new Proba("bras", 200);
+var newProba = new Proba("fata", 150);
 
 var addProba = await client.Create(newProba);
 Console.WriteLine(addProba.ToString());
 
-// await client.Update("3",newProba);
+await client.Update("4",newProba);
