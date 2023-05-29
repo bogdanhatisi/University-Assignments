@@ -3,6 +3,13 @@ import numpy as np
 import matplotlib as plt
 import nnfs
 from nnfs.datasets import spiral_data
+
+import os
+import cv2
+import numpy as np
+from keras import Sequential
+from keras.layers import Flatten, Dense
+from sklearn.model_selection import train_test_split
 # np.random.seed(0)
 
 nnfs.init()
