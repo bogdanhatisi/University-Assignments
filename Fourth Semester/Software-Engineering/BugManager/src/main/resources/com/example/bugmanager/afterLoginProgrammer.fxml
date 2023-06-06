@@ -7,20 +7,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="447.0" prefWidth="791.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bugmanager.AfterLogin">
+<AnchorPane prefHeight="447.0" prefWidth="791.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bugmanager.AfterLoginProgrammer">
    <children>
       <TableView fx:id="bugView" layoutX="94.0" layoutY="54.0" prefHeight="218.0" prefWidth="641.0" />
-      <TextField fx:id="bugName" layoutX="110.0" layoutY="295.0" promptText="BugStatus" />
-      <TextField fx:id="bugDescription" layoutX="110.0" layoutY="326.0" promptText="BugDescription" />
-      <Button fx:id="addButton" layoutX="147.0" layoutY="411.0" mnemonicParsing="false" onAction="#addBug" text="Add" />
       <TextField fx:id="searchField" layoutX="95.0" layoutY="14.0" prefHeight="25.0" prefWidth="456.0" promptText="search bug..." />
       <Button fx:id="searchButton" layoutX="575.0" layoutY="14.0" mnemonicParsing="false" onAction="#filterBugs" text="Search" />
-      <TextField fx:id="programmerId" layoutX="110.0" layoutY="360.0" promptText="ProgrammerId" />
       <Label fx:id="error" layoutX="331.0" layoutY="321.0" prefHeight="60.0" prefWidth="423.0" textFill="#fc0000">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button fx:id="deleteButton" layoutX="233.0" layoutY="411.0" mnemonicParsing="false" onAction="#deleteBug" prefHeight="25.0" prefWidth="87.0" text="Delete" />
+      <Button fx:id="solveButton" layoutX="94.0" layoutY="292.0" mnemonicParsing="false" onAction="#solveBug" prefHeight="89.0" prefWidth="165.0" text="Solve" />
    </children>
 </AnchorPane>

@@ -10,5 +10,6 @@ module com.example.bugmanager {
 
 
     opens com.example.bugmanager to javafx.fxml;
+    opens com.example.bugmanager.model;
     exports com.example.bugmanager;
 }

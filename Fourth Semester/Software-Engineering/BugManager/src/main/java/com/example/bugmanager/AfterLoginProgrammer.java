@@ -16,7 +16,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class AfterLogin implements Initializable {
+public class AfterLoginProgrammer implements Initializable {
 
     private Service service;
 
@@ -26,23 +26,9 @@ public class AfterLogin implements Initializable {
     @FXML
     private TextField searchField;
 
-    @FXML
-    private TextField bugName;
-
 
     @FXML
-    private TextField bugDescription;
-
-
-    @FXML
-    private TextField programmerId;
-
-
-    @FXML
-    private Button addButton;
-
-    @FXML
-    private Button deleteButton;
+    private Button solveButton;
 
     @FXML
     private Button searchButton;
@@ -57,7 +43,7 @@ public class AfterLogin implements Initializable {
 
     public void init()
     {
-        list = FXCollections.observableList(Service.toList(service.getAllBugs()));
+        list = FXCollections.observableList(Service.toList(service.getAllBugsFromProgrammer(service.getProgrammerId())));
         initialize_table(bugView, Arrays.asList("id","description","status","programmerId"));
         bugView.setItems(list);
 
@@ -76,24 +62,11 @@ public class AfterLogin implements Initializable {
     }
 
     @FXML
-    private void addBug(ActionEvent event) throws IOException {
-
-        if(bugDescription.getText().isEmpty()|| bugName.getText().isEmpty() || programmerId.getText().isEmpty())
-        {
-            error.setText("Please fill all the fields correctly");
-            return;
-        }
-        service.addBug(bugDescription.getText().toString(),bugName.getText().toString(),Integer.parseInt(programmerId.getText()));
-        list = FXCollections.observableList(Service.toList(service.getAllBugs()));
-        bugView.setItems(list);
-    }
-
-    @FXML
-    private void deleteBug(ActionEvent event) {
+    private void solveBug(ActionEvent event) {
         Bug bug = bugView.getSelectionModel().getSelectedItem();
 
-        service.deleteBug(bug.getId());
-        list = FXCollections.observableList(Service.toList(service.getAllBugs()));
+        service.solveBug(bug);
+        list = FXCollections.observableList(Service.toList(service.getAllBugsFromProgrammer(service.getProgrammerId())));
         bugView.setItems(list);
     }
 
@@ -104,11 +77,11 @@ public class AfterLogin implements Initializable {
         if(searchField.getText().isEmpty())
         {
             error.setText("Please fill the searchbar");
-            list = FXCollections.observableList(Service.toList(service.getAllBugs()));
+            list = FXCollections.observableList(Service.toList(service.getAllBugsFromProgrammer(service.getProgrammerId())));
             bugView.setItems(list);
             return;
         }
-        list = FXCollections.observableList(Service.toList(service.getAllBugsWithDescription(searchField.getText().toString())));
+        list = FXCollections.observableList(Service.toList(service.getAllBugsWithDescriptionFromProgrammer(searchField.getText().toString(),service.getProgrammerId())));
         if(list.isEmpty())
         {
             error.setText("No bugs found!");

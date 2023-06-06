@@ -91,6 +91,30 @@ public class VerifierRepository implements Repository<Integer,Verifier> {
     }
 
 
+    public Verifier findByUserAndPass(String username,String password){
+        if (username == null || password == null) {
+            throw new IllegalArgumentException("User and pass can't be null!\n");
+        }
+        try (Connection connection = jdbcUtils.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * from verifier where username = ? and password = ?")) {
+            preparedStatement.setString(1, username);
+            preparedStatement.setString(2, password);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                String newUsername = resultSet.getString("username");
+                String newPassword = resultSet.getString("password");
+                int id = resultSet.getInt("id");
+
+
+                Verifier verifier = new Verifier(id,username,password);
+                return verifier;
+            }
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        }
+        return null;
+
+    }
     public Iterable<Verifier> findAll() {
         List<Verifier> verifiers = new ArrayList<>();
         try (Connection connection = jdbcUtils.getConnection();

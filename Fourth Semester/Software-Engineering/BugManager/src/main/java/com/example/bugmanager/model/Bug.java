@@ -2,9 +2,9 @@ package com.example.bugmanager.model;
 
 public class Bug extends Identifiable<Integer>  {
 
-    private String description;
-    private String status;
-    private Integer programmerId;
+    public String description;
+    public String status;
+    public Integer programmerId;
 
     public Bug(String description, String status, Integer programmerId) {
         this.description = description;

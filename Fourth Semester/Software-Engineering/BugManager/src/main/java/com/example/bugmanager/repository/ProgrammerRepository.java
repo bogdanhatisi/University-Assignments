@@ -94,25 +94,26 @@ public class ProgrammerRepository implements Repository<Integer, Programmer> {
 
     }
 
-    public int FindByUserAndPass(String user,String pass){
+    public Programmer findByUserAndPass(String user,String pass){
 
         try (Connection connection = jdbcUtils.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * from programmer where username = ?, password = ?")) {
+             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * from programmer where username = ? and password = ?")) {
             preparedStatement.setString(1, user);
-            preparedStatement.setString(1, pass);
+            preparedStatement.setString(2, pass);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
+                int id = resultSet.getInt("id");
                 String username = resultSet.getString("username");
                 String password = resultSet.getString("password");
                 int projectId = resultSet.getInt("projectId");
 
-                Programmer programmer = new Programmer(username,password,projectId);
-                return 1;
+                Programmer programmer = new Programmer(id,username,password,projectId);
+                return programmer;
             }
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
-        return 0;
+        return null;
 
     }
 

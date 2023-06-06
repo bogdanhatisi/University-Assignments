@@ -1,5 +1,10 @@
 package com.example.bugmanager;
 
+import com.example.bugmanager.model.Project;
+import com.example.bugmanager.repository.BugRepository;
+import com.example.bugmanager.repository.ProgrammerRepository;
+import com.example.bugmanager.repository.ProjectRepository;
+import com.example.bugmanager.repository.VerifierRepository;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,11 +17,18 @@ public class Main extends Application {
     private static Stage stg;
     @Override
     public void start(Stage primaryStage) throws IOException {
-        stg = primaryStage;
-        primaryStage.setResizable(false);
-        Parent root = FXMLLoader.load(getClass().getResource("logInView.fxml"));
-        primaryStage.setTitle("BugManager");
-        primaryStage.setScene(new Scene(root));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("logInView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(),600,600);
+        primaryStage.setTitle("Bug Manager");
+        primaryStage.setScene(scene);
+
+        VerifierRepository verifierRepo = new VerifierRepository();
+        BugRepository bugRepo = new BugRepository();
+        ProgrammerRepository programmerRepo = new ProgrammerRepository();
+
+
+        LogInController controller = fxmlLoader.getController();
+        controller.setService(new Service(bugRepo,programmerRepo,verifierRepo));
         primaryStage.show();
 
 
