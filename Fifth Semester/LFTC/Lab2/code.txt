@@ -1,0 +1,13 @@
+#include<iostream>
+
+using namespace std ;
+
+int main() {
+    int thislongervariable , test, x;
+    thislongervariable = 1.6 ;
+    cin>> test >> x ;
+    cout<< x ;
+    x = test / x ;
+
+    return 0 ;
+}
