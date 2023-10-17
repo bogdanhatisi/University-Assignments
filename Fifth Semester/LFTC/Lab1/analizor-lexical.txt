@@ -1,0 +1,57 @@
+1. Specificarea minilimbajului de programare (MLP).
+Limbajul trebuie sa contina cel putin anumite instructiuni si tipuri de
+date:
+- 2 tipuri de date simple si un tip de date definit de utilizator
+- instructiuni:
+- o instructiune de atribuire
+- o instructiune de intrare/iesire
+- o instructiune de selectie (conditionala)
+- o instructiune de ciclare
+Pe langa acestea, vor exista unele restrictii suplimentare referitoare la
+identificatori si constante (vezi sectiunea 3.1).
+Se cere ca specificarea sa fie suficient de generala astfel incat sa descrie
+constructiile limbajului folosite pentru scrierea programelor de la pct.1
+
+
+
+program = header, "int main() {", code_block, "}"
+header = "#include <", library, ">", { "#include <", library, ">" }
+library = (letter | digit | special_char)+
+namespace = "using namespace std;"
+user_type = "struct", name, "{", declare_instruction, "};"
+declare_instruction = type, ID, ["[", number, "]"], { ",", ID, ["[", number, "]"] }
+input_instruction = "cin>>", ID, { ">>", ID }
+output_instruction = "cout<<", (ID | CONST), { "<<", (ID | CONST) }
+assign_instruction = ID, ("=" CONST | { operator, (CONST | ID) })
+instruction = io_instruction, ";" | declare_instruction, ";" | assign_instruction, ";" | if_instruction | while_instruction
+code_block = "{", instruction_list, "return 0;", "}"
+instruction_list = { instruction }
+if_instruction = "if (", condition, ")", "{", instruction_list, "}"
+io_instruction = input_instruction | output_instruction
+condition = boolean_expression, { ( "&&" | "||" ), boolean_expression }
+boolean_expression = (ID | CONST), operator, (ID | CONST)
+while_instruction = "while (", condition, ")", "{", instruction_list, "}"
+number = digit, { digit }
+type = "int" | "char" | "float"
+name = letter, { letter }
+ID = letter, { letter }
+CONST = number
+operator = "+" | "-" | "*" | "/" | "<=" | ">=" | "<" | ">" | "!=" | "=="
+letter = [a-zA-Z]
+special_char = "/" | "\\" | "_" | "-"
+digit = [0-9]
+
+
+
+for, vector, clasa,
+
+
+
+
+
+
+
+
+
+
+
