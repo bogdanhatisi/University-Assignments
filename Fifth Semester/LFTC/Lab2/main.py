@@ -1,5 +1,11 @@
+import re
+
 from atom import Atom
 from pathlib import Path
+
+from fip import FipElement
+from ts import Ts
+
 
 def process(line, line_number):
     line = line.strip()
@@ -33,14 +39,91 @@ def element_print(s):
 
 def main():
     program_file = Path(__file__).with_name('code.txt')
-    with open(program_file, 'r') as reader:
-        line_number = 1
-        for line in reader:
-            if not process(line, line_number):
-                return
-            line_number += 1
+
+    atoms = {
+        "ID": 0,
+        "CONST": 1,
+        "#include<iostream>": 2,
+        "struct": 3,
+        "main()": 4,
+        "using": 5,
+        "namespace": 6,
+        "std": 7,
+        "return": 8,
+        "cin>>": 9,
+        "cout<<": 10,
+        "if": 11,
+        "int": 12,
+        "char": 13,
+        "float": 14,
+        ";": 15,
+        ",": 16,
+        "[": 17,
+        "]": 18,
+        "{": 19,
+        "}": 20,
+        "-": 21,
+        "+": 22,
+        "/": 23,
+        "*": 24,
+        "=": 25,
+        ">>": 26,
+        "<<": 27,
+        ">": 28,
+        "<": 29,
+        ">=": 30,
+        "<=": 31,
+        "==": 32,
+        "!=": 33
+    }
+
+    fip = []
+    tsID = Ts()
+    tsConst = Ts()
+
+    with open(program_file) as program:
+        lineNumber = 1
+        for line in program:
+            line = line.strip()
+            if not line:
+                continue
+
+            elements = line.split()
+            for element in elements:
+                fipElement = None
+                if isConst(element):
+                    pos = tsConst.findAtom(element)
+                    fipElement = FipElement(element, atoms["CONST"], tsConst.addAtom(element) if pos is None else pos)
+                elif element in atoms:
+                    fipElement = FipElement(element, atoms[element], -1)
+                elif isId(element):
+                    pos = tsID.findAtom(element)
+                    fipElement = FipElement(element, atoms["ID"], tsID.addAtom(element) if pos is None else pos)
+                else:
+                    print(f"An error occurred on line {lineNumber}")
+                    return
+                fip.append(fipElement)
+            lineNumber += 1
+
+    print("FORMA INTERNA A PROGRAMULUI")
+    for index, fipElement in enumerate(fip):
+        print(f"Index: {index}; cod atom: {fipElement.codAtom}; cod in TS: {fipElement.codInTs}")
+
+    print("TABELA DE SIMBOLURI ID-URI")
+    print(tsID.printTable())
+
+    print("TABELA DE SIMBOLURI CONSTANTE")
+    print(tsConst.printTable())
+
+
+def isId(atom):
+    return bool(re.match("^[a-z][a-z0-9]{0,250}$", atom))
+
+
+def isConst(atom):
+    return bool(re.match("^[0-9]\\.*[0-9]*$", atom))
+
 
 if __name__ == "__main__":
     main()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
