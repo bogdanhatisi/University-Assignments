@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5654828a-cafb-48bf-b7fa-8846074f19a1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab2-3/Atom.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab2-3/Fip.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab2-3/Transition.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab2-3/Ts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atom.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fip.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ts.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PPD/Lab1/ConsoleApplication1/.vs/ConsoleApplication1/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../PPD/Lab1/ConsoleApplication1/.vs/ConsoleApplication1/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PPD/Lab1/ConsoleApplication1/.vs/ConsoleApplication1/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../PPD/Lab1/ConsoleApplication1/.vs/ConsoleApplication1/v17/.suo" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
